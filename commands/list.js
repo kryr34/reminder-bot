@@ -32,6 +32,7 @@ module.exports.execute = (client, interaction, args) => {
 		return interaction.reply({
 			embeds: embeds,
 			ephemeral: true,
+			allowedMentions: { repliedUser: false },
 		});
 	})
 	.catch(console.error);

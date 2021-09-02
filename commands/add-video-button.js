@@ -42,6 +42,7 @@ module.exports.execute = (client, interaction, args) => {
 			if(error == 'Mismatch') return interaction.reply({
 				content: 'Not Live or Premiere',
 				ephemeral: true,
+				allowedMentions: { repliedUser: false },
 			});
 			console.error(error)
 		})

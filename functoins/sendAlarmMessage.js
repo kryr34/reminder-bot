@@ -9,7 +9,11 @@ module.exports.sendAlarmMessage = (client, element, videoObject) => {
 	.then(channel => {
 		const embed = videoObject.toEmbed()
 			.setFooter(`${videoObject.type}`);
-		return channel.send({ embeds: [embed] });
+		return channel.send({
+		  	embeds: [embed],
+			ephemeral: true,
+			allowedMentions: { repliedUser: false },
+		});
 	})
 	.then(() => {
 		return mongoClient.delete(element,"hakkaDB","waitingVideos")
