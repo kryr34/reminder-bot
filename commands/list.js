@@ -17,6 +17,7 @@ module.exports.execute = (client, interaction, args) => {
 		return Promise.all(primises)
 	})
 	.then(videos => {
+		videos = videos.filter(video => video);
 		if(videos.length == 0) {
 			return interaction.reply('have novideo waiting!');
 		}

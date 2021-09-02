@@ -31,6 +31,7 @@ module.exports.contentListener = (client, message) => {
 		return replyMessage.delete();
 	})
 	.catch(error => {
+		if(error = "No Video") return;
 		if(error.code == 10008) return console.error('10008 content listener');
 		console.error(error);
 		// message.client.users.fetch("172302195356729355")
