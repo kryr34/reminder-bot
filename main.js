@@ -3,6 +3,7 @@ const { YoutubeApi } = require('./interfaces/youtubeApi');
 const { myMongoClient } = require('./interfaces/mongoDB');
 const fs = require("fs");
 const { token, youtubeApiKey, mongoDBurl } = require('./secret.json');
+const { deployGlobalCommands, deployGuildCommands } = require('./deployCommands');
 const { contentListener } = require('./functoins/contentListener');
 const { VideoListener } = require('./interfaces/videoListener');
 const { sendAlarmMessage } = require('./functoins/sendAlarmMessage');
@@ -34,6 +35,8 @@ for (const file of commandFiles) {
 
 // When the client is ready, run this code=====================================
 client.on('ready', () => {
+	deployGlobalCommands(client);
+	deployGuildCommands(client);
 	console.log('[Ready!]');
 });
 

@@ -11,17 +11,13 @@ module.exports.execute = (client, interaction, args) => {
 	}
 	interaction.reply({
 		content: 'Pong!', 
+		ephemeral: true,
 	});
-	interaction.channel.send({
-		content: 'Pong!',
-		data: {
-			
-		}
-	})
 };
 module.exports.data = {
 	name: "ping",
 	aliases: [],
 	description: "",
-	type: 3
+	type: 3,
+	global: true,
 }

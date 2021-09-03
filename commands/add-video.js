@@ -47,7 +47,7 @@ module.exports.execute = (client, interaction, args) => {
 };
 
 module.exports.data = {
-	name: "GET TUUTI!",
+	name: "Set Reminder",
 	aliases: [],
 	description: "",
 	type: 3
