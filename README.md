@@ -6,6 +6,7 @@ discord bot for youtube live and premiere reminder(using mongoDB and ytApi)
 - [ ] mention users while remind
 - [ ] DM users while remind
 - [x] when text channel send video link, ask user if remind
+- [ ] change youtube api to web crawler
 
 ## Command
 ### slash command
